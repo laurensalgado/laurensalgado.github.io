@@ -1,0 +1,10 @@
+.biobox {
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  width: 320px;
+  padding: 10px;
+}
+table, th, td {
+  border: 1px solid black;
+}
