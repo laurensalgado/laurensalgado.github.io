@@ -8,3 +8,21 @@
 table, th, td {
   border: 1px solid black;
 }
+.newstitle {
+  text-align: center;
+  background-color: pink;
+  margin-bottom: 10px;
+  padding: 15px;
+
+}
+.newssite {
+  float: left;
+  background-color: gray;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  padding: 10px 15px 10px 15px;
+}
+
+.clear {
+  clear: left;
+}
