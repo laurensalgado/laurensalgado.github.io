@@ -26,3 +26,18 @@ table, th, td {
 .clear {
   clear: left;
 }
+
+#greeting {
+  font-size: 2em;
+  margin: 1em;
+}
+
+#weather {
+  font-size: 2em;
+  margin: 1em;
+}
+
+#showweather {
+  font-size: 2em;
+  margin: 1em;
+}

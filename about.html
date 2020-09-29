@@ -4,7 +4,49 @@
     <title>Lauren Salgado</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="site.css">
-  </head>
+
+    <script>
+
+  window.onload = function() {
+    // functions that run after page loads
+    displayGreeting();
+    fetchWeather();
+  }
+
+  // display good morning, afternoon or evening based on the time
+  function displayGreeting() {
+    var date = new Date();
+    var hour = date.getHours();
+    var description = "";
+    if (hour < 12) {
+      description = "morning";
+    } else if (hour < 17) {
+      description = "afternoon";
+    } else {
+      description = "evening";
+    }
+    document.getElementById("greeting").innerHTML = "Good " + description;
+  }
+
+  // get weather data from openweathermap and display the current temp
+  function fetchWeather() {
+  var str1 = "It is currently "
+  var str3 = "&deg; in Tucson, AZ."
+
+    fetch("https://api.openweathermap.org/data/2.5/weather?zip=85746,US&appid=b2734a4e1d3141130a9bc0f9ffa8e55b&units=imperial")
+    .then(function(resp) { return resp.json() })
+    .then(function(data) {
+      document.getElementById("weather").innerHTML = str1.concat(data.main.temp, str3);
+    })
+    .catch(function() {
+      document.getElementById("weather").innerHTML = "Error in fetchWeather function";
+    });
+  }
+
+  </script>
+
+</head>
+<body>
 
     <div class=newstitle ; colspan="2">News Sites</div>
     <div class=newssite>New York Times</div>
@@ -31,5 +73,7 @@
         As I evolve I found that we are all connected and divisions are man-made.</p>
   </center>
 
+  <div id="greeting"></div>
+  <div id="weather"></div>
   </body>
 </html>
