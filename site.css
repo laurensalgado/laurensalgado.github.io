@@ -24,8 +24,8 @@ table, th, td {
   margin-bottom: 10px;
   padding: 10px 20px 10px 20px;
   text-align: center;
-
 }
+
 .newssite {
   float: left;
   margin-right: 10px;
@@ -78,7 +78,7 @@ table, th, td {
 #greeting {
   background-color: white;
   width: 344px;
-  float: leftt;
+  float: left;
   font-size: 2em;
   text-align: left;
   padding: 20px 20px 20px 20px;
@@ -91,5 +91,25 @@ table, th, td {
   font-size: 2em;
   text-align: left;
   padding: 20px 20px 20px 20px;
-  }
+}
+
+.rss_title {
+  background-color: gray;
+  font-size: 3em;
+  text-align: left;
+}
+
+.rss_description {
+  background-color: white;
+  width: 344px;
+  font-size: 2em;
+  text-align: left;
+  padding: 20px 20px 20px 20px;
+}
+
+.rss_items {
+  background-color: white;
+  font-size: 1em;
+  text-align: left;
+  padding: 20px 20px 20px 20px;
 }
