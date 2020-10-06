@@ -12,6 +12,7 @@
     displayGreeting();
     fetchWeather();
     displayRSSFeed();
+    listSheet();
   }
 
   // display good morning, afternoon or evening based on the time
@@ -61,6 +62,27 @@
     }
   });
 }
+function listSheet() {
+  fetch('https://api.sheetson.com/v2/sheets/Sheet1', {
+    withCredentials: true,
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ld8soFzw3P0b3SeBhlLGPj_ypEU9Ospp4OKdhq0qmvWrj2SRFRXybbFH4krv9g',
+      'X-Sheetson-Spreadsheet-Id': '1aXZI3UZuZP52MKyVtYn-ZYwwJy3iILQqkL5B-JtHhOw'
+    }
+  })
+  .then(function(resp) { return resp.json() })
+  .then(function(data) {
+    for (var i = 0; i < data.results.length; i++) {
+      var result = data.results[i];
+      let divElement = '<div class="cell">' + '<div class="cell_name">' + result.name + '</div>' + '<div class="cell_address">' + result.address + '</div>' + '<div class="cell_url"><a href="' + result.url + '">' + result.url + '</a></div>' + '<div class="cell_phone"><a href="tel://' + result.phone + '">' + result.phone + '</a></div>' + '</div>';
+      document.getElementById("sheet").innerHTML += divElement;
+    }
+  })
+  .catch(function() {
+    document.getElementById("sheet").innerHTML = "Error in listSheet function";
+  });
+}
 
   </script>
 
@@ -106,9 +128,9 @@
 
     <div class="clear"></div>
 
-    <div id="rss_title"></div>
-    <div id="rss_description"></div>
-    <div id="rss_items"></div>
+    <h2>COVID-19 Testing Locations</h2>
+    <div id="sheet"></div>
+
 
   </body>
 </html>
