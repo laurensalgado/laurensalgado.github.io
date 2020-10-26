@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>Lauren's Briefs</title>
+  <link>https://laurensalgado.github.io/briefs/briefs.xml</link>
+  <description>Short audio stories by Lauren Salgado</description>
+  <item>
+    <pubDate>Mon, 19 Oct 2020 09:00:00 -0700</pubDate>
+    <title>Dogs & Donuts</title>
+    <link>https://laurensalgado.github.io/briefs/dogsdonuts.mp3</link>
+    <description>What's it like to go to a cafe for humans and dogs?</description>
+    <enclosure url="https://laurensalgado.github.io/briefs/dogsdonuts.mp3<" type="audio/mpeg" length="FILE SIZE"></enclosure>
+    <guid isPermaLink="false">Dogs & Donuts</guid>
+  </item>
+  <item>
+    <pubDate>Mon, 19 Oct 2020 09:00:00 -0700</pubDate>
+    <title>First Generation College Students</title>
+    <link>https://laurensalgado.github.io/briefs/trio.mp3<</link>
+    <description>What resources are out there for first genration college students?</description>
+    <enclosure url="https://laurensalgado.github.io/briefs/dogsdonuts.mp3<" type="audio/mpeg" length="FILE SIZE"></enclosure>
+    <guid isPermaLink="false">First Generation College Students</guid>
+  </item>
+</channel>
+</rss>
